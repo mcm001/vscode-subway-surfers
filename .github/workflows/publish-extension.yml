@@ -17,9 +17,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Login to VSCE
-        run: echo "${{ secrets.MARKETPLACE_TOKEN }}" | npx vsce login jirkavrba
-
       - name: Build package
         run: npx vsce package
 
